@@ -19,5 +19,7 @@
     "Python": "Linux 3.12.14",
     "remote_ci": "NOT_RUN"
   },
-  "publication": "Website publication in progress; remote CI not yet verified"
+  "publication": "Public alpha; final default-branch launch status recorded in portfolio index",
+  "url": "https://github.com/nripankadas07/prom-label-budget",
+  "validated_source_head": "a5bf1245d77d300417ee1c405a27ef4d0baf0f89"
 }

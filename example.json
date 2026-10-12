@@ -1,0 +1,17 @@
+{
+  "series": [
+    {
+      "__name__": "requests_total",
+      "user": "synthetic-a",
+      "code": "200"
+    },
+    {
+      "__name__": "requests_total",
+      "user": "synthetic-b",
+      "code": "200"
+    }
+  ],
+  "drop": [
+    "user"
+  ]
+}

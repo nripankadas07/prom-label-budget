@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "prom-label-budget"
+version = "0.1.0"
+description = "Offline normalized-input diagnostic with explicit limitations"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+[project.scripts]
+prom-label-budget = "prom_label_budget.cli:main"
+[tool.setuptools]
+packages = ["prom_label_budget"]

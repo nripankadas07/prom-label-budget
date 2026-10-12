@@ -1,0 +1,23 @@
+{
+  "name": "prom-label-budget",
+  "state": "VALIDATED",
+  "user": "Observability engineer reviewing exported series labels before relabeling.",
+  "pain": "Estimate observed series collisions when dropping a dimension without sending production labels to a service.",
+  "smallest_capability": "Deduplicate normalized series, count metric and label cardinality and simulate a drop-label projection, with collision-group counts.",
+  "acceptance": [
+    "Duplicate series do not inflate counts.",
+    "Metric names remain distinct after projection.",
+    "Validate schemas and reject dropping __name__."
+  ],
+  "demand": "Inferred from Prometheus high-cardinality guidance and maintained cardinality tooling; no verified user request.",
+  "discovery": "Prometheus relabeling/cardinality examples.",
+  "distinctness": "Works on metric-series identity; existing tabular and trace tools do not simulate series projections.",
+  "limits": "No scraping, PromQL, TSDB memory prediction, storage savings or semantic value aggregation.",
+  "local_validation": {
+    "unit_tests": 14,
+    "wheel_and_clean_install": "PASS",
+    "Python": "Linux 3.12.14",
+    "remote_ci": "NOT_RUN"
+  },
+  "publication": "Website publication in progress; remote CI not yet verified"
+}

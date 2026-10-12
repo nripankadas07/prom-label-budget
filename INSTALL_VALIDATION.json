@@ -1,0 +1,105 @@
+{
+  "name": "prom-label-budget",
+  "state": "VALIDATED",
+  "tested": "Linux Python 3.12.14",
+  "unit_tests": 14,
+  "install_passed": true,
+  "remote_ci": "NOT_RUN",
+  "publication": "Website publication in progress; remote CI not yet verified",
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "compileall",
+        "-q",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/prom-label-budget"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-index",
+        "--no-deps",
+        "--no-build-isolation",
+        "--wheel-dir",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/prom-label-budget/wheelhouse",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/prom-label-budget"
+      ],
+      "exit": 0,
+      "stdout": "Processing /workspace/scratch/5d784ffbbfd3/prepared-oct12/prom-label-budget\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: prom-label-budget\n  Building wheel for prom-label-budget (pyproject.toml): started\n  Building wheel for prom-label-budget (pyproject.toml): finished with status 'done'\n  Created wheel for prom-label-budget: filename=prom_label_budget-0.1.0-py3-none-any.whl size=4004 sha256=1907ef0df7bc157922ba0d1d858712d574e55fcffec063dd5ca45fa029529631\n  Stored in directory: /tmp/pip-ephem-wheel-cache-xuv_nufd/wheels/e5/f1/ea/d0fe73ccba6e581003f6224d10e4f78bd03eb3009ccae46c53\nSuccessfully built prom-label-budget\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "venv",
+        "/tmp/candidate-install-3keqetev/venv"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-3keqetev/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/prom-label-budget/wheelhouse/prom_label_budget-0.1.0-py3-none-any.whl"
+      ],
+      "exit": 0,
+      "stdout": "Processing /workspace/scratch/5d784ffbbfd3/prepared-oct12/prom-label-budget/wheelhouse/prom_label_budget-0.1.0-py3-none-any.whl\nInstalling collected packages: prom-label-budget\nSuccessfully installed prom-label-budget-0.1.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-3keqetev/venv/bin/prom-label-budget",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/prom-label-budget/example.json"
+      ],
+      "exit": 0,
+      "stdout": "{\"collision_group_sizes\": [2], \"duplicates\": 0, \"input_rows\": 2, \"label_cardinality\": {\"__name__\": 1, \"code\": 1, \"user\": 2}, \"lost_identity_count\": 1, \"metrics\": {\"requests_total\": 2}, \"projected_series\": 1, \"unique_series\": 2}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-3keqetev/venv/bin/prom-label-budget",
+        "/tmp/candidate-install-3keqetev/bad.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: bounded series and unique drop labels required; keep __name__\n"
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-3keqetev/venv/bin/prom-label-budget",
+        "/tmp/candidate-install-3keqetev/missing.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: [Errno 2] No such file or directory: '/tmp/candidate-install-3keqetev/missing.json'\n"
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-3keqetev/venv/bin/prom-label-budget",
+        "/tmp/candidate-install-3keqetev/large.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: input exceeds 1 MiB\n"
+    }
+  ],
+  "wheel": {
+    "name": "prom_label_budget-0.1.0-py3-none-any.whl",
+    "sha256": "1907ef0df7bc157922ba0d1d858712d574e55fcffec063dd5ca45fa029529631"
+  }
+}

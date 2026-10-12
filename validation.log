@@ -1,0 +1,19 @@
+test_cli_demo (test_core.ContractTests.test_cli_demo) ... ok
+test_cli_malformed (test_core.ContractTests.test_cli_malformed) ... ok
+test_contract_00 (test_core.ContractTests.test_contract_00) ... ok
+test_contract_01 (test_core.ContractTests.test_contract_01) ... ok
+test_contract_02 (test_core.ContractTests.test_contract_02) ... ok
+test_contract_03 (test_core.ContractTests.test_contract_03) ... ok
+test_contract_04 (test_core.ContractTests.test_contract_04) ... ok
+test_contract_05 (test_core.ContractTests.test_contract_05) ... ok
+test_contract_06 (test_core.ContractTests.test_contract_06) ... ok
+test_contract_07 (test_core.ContractTests.test_contract_07) ... ok
+test_contract_08 (test_core.ContractTests.test_contract_08) ... ok
+test_contract_09 (test_core.ContractTests.test_contract_09) ... ok
+test_contract_10 (test_core.ContractTests.test_contract_10) ... ok
+test_contract_11 (test_core.ContractTests.test_contract_11) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.234s
+
+OK
